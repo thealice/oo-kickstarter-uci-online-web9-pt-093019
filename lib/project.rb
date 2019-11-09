@@ -9,6 +9,9 @@ class Project
   def save
     @@all << self
   end
+  def self.all
+    @@all
+  end
   def add_backer(backer)
     backers << backer
   end
