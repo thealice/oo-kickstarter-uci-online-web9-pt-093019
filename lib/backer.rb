@@ -10,6 +10,6 @@ class Backer
       @backed_projects << project_instance
       project_instance.add_backer(self)
 
-      Project.new(project_instance)
+      # Project.new(project_instance)
   end
 end
