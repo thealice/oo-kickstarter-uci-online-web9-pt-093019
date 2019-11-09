@@ -9,9 +9,10 @@ class Backer
     if Project.all.include?(project_instance)
       @backed_projects << project_instance
       project_instance.add_backer(self)
-      binding.pry
+
     else
       Project.new(project_instance)
+            binding.pry
     end
   end
 end
