@@ -6,10 +6,9 @@ class Backer
     @backed_projects = []
   end
   def back_project(project_instance)
-    Project.all.include?(project_instance)
+    # Project.all.include?(project_instance)
       @backed_projects << project_instance
       project_instance.add_backer(self)
-
       # Project.new(project_instance)
   end
 end
