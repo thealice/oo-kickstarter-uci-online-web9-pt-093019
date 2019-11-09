@@ -4,12 +4,12 @@ class Backer
     @name = name
     @backed_projects = []
   end
-  def backed_projects(project_instance)
+  def back_projects(project_instance)
     if Project.all.include?(project_instance)
       @backed_projects << project_instance
       project_instance.add_backer(self)
-    # else
-    #   Project.new(project_instance)
+    else
+      Project.new(project_instance)
     end
   end
 end
